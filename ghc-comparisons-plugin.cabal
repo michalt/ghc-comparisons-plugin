@@ -1,0 +1,27 @@
+name:           ghc-comparisons-plugin
+version:        0.0.1
+synopsis:       Simple optimization for nested comparisons.
+homepage:       https://github.com/michalt/ghc-comparisons-plugin
+license:        BSD3
+license-file:   LICENSE
+author:         Michal Terepeta
+maintainer:     michal.terepeta@gmail.com
+copyright:      (c) 2011-2012 Michal Terepeta
+category:       GhcPlugins
+build-type:     Simple
+cabal-version:  >=1.8
+
+source-repository head
+  type:         git
+  location:     https://github.com/michalt/ghc-comparisons-plugin.git
+
+library
+  exposed-modules:
+    GhcPlugins.Comparisons
+
+  other-modules:
+    GhcPlugins.Comparisons.Pass
+
+  build-depends:
+    base >= 4.5 && < 4.7,
+    ghc >= 7.4
